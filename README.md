@@ -2,4 +2,4 @@
 
 This repository hosts the source files for my personal portfolio website. 
 
-🌐 **View the live website here:** [https://deyvanloxefal.github.io](https://deyvanloxefal.github.io)
+🌐 **View the live website here:** [https://depanloo.github.io](https://depanloo.github.io)
