@@ -459,17 +459,3 @@ footer p {
         padding-bottom: 30px;
     }
 }
-
-/* --- PAKSA 1 KOLOM DI LAYAR HP --- */
-@media screen and (max-width: 768px) {
-    .projects-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* 1fr = 1 Full Row (1 Kolom) */
-        gap: 30px !important;
-    }
-    
-    .project-card {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
