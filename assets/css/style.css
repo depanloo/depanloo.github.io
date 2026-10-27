@@ -194,13 +194,18 @@ nav ul li a:hover::after {
 }
 
 /* --- 5.5 Project Cards --- */
+/* --- FLEXBOX ENGINE: MAKSIMAL 3 KOLOM & SELALU CENTER --- */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Kunci ajaib biar berapapun sisanya selalu ke tengah */
     gap: 40px;
 }
 
+/* Default Layar Laptop/PC: Maksimal 3 Kolom */
 .project-card {
+    /* Lebar total 100% dikurangi 2x gap (80px), dibagi 3 */
+    width: calc((100% - 80px) / 3);
     background: var(--card-bg-color);
     border-radius: 5px;
     overflow: hidden;
@@ -210,11 +215,11 @@ nav ul li a:hover::after {
     flex-direction: column;
 }
 
+/* Biar efek hover dan gambar ga ilang (ini tetep sama kayak sebelumnya) */
 .project-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
-
 .project-card img {
     width: 100%;
     height: 220px;
@@ -455,5 +460,20 @@ footer p {
         border-right: none;
         border-bottom: 1px solid #e9ecef;
         padding-bottom: 30px;
+    }
+}
+
+/* --- RESPONSIVE LAYOUT --- */
+/* Layar Tablet: Berubah jadi 2 Kolom */
+@media screen and (max-width: 1024px) {
+    .project-card {
+        width: calc((100% - 40px) / 2);
+    }
+}
+
+/* Layar HP: Berubah jadi 1 Kolom berjejer ke bawah */
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 100%;
     }
 }
